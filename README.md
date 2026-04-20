@@ -241,7 +241,7 @@ ICON CORPORATION LIMITED
 
 ## Contact
 
-**Project Lead:** FIRST-PRINCE
+**Project Lead:** IPINNIMO OLUWAFEMI
 
 ---
 
