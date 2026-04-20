@@ -1,0 +1,9 @@
+{
+  "name": "AlIve",
+  "description": "An intelligent healthcare app leveraging AI for unified medical records, rehabilitation coaching, and personalized dietary analysis.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone",
+    "geolocation"
+  ]
+}
