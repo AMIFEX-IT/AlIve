@@ -1,0 +1,210 @@
+.settings-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  padding: var(--alive-padding-md);
+}
+
+.settings-modal {
+  background-color: var(--alive-secondary);
+  border-radius: var(--alive-radius-md);
+  width: 100%;
+  max-width: 600px;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--alive-shadow-lg);
+}
+
+.settings-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--alive-padding-md) var(--alive-padding-lg);
+  border-bottom: 1px solid var(--alive-border);
+}
+
+.settings-header h2 {
+  font-family: var(--alive-font-family);
+  font-size: var(--alive-font-size-header-large);
+  font-weight: var(--alive-font-bold);
+  color: var(--alive-text);
+  margin: 0;
+}
+
+.settings-content {
+  padding: var(--alive-padding-lg);
+  overflow-y: auto;
+  flex: 1;
+}
+
+.settings-section {
+  margin-bottom: var(--alive-padding-lg);
+}
+
+.settings-section:last-child {
+  margin-bottom: 0;
+}
+
+.settings-item {
+  background-color: #f5f9ff;
+  border-radius: var(--alive-radius-md);
+  padding: var(--alive-padding-md);
+  border: 1px solid var(--alive-border);
+}
+
+.settings-item-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--alive-padding-md);
+}
+
+.settings-item-header h3 {
+  font-family: var(--alive-font-family);
+  font-size: var(--alive-font-size-header);
+  font-weight: var(--alive-font-bold);
+  color: var(--alive-text);
+  margin: 0 0 var(--alive-padding-xs) 0;
+}
+
+.settings-item-description {
+  font-family: var(--alive-font-family);
+  font-size: 14px;
+  color: var(--alive-placeholder);
+  margin: 0;
+}
+
+/* Toggle Switch */
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 26px;
+  flex-shrink: 0;
+}
+
+.toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.toggle-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.3s;
+  border-radius: 26px;
+}
+
+.toggle-slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.3s;
+  border-radius: 50%;
+}
+
+.toggle-switch input:checked + .toggle-slider {
+  background-color: var(--alive-primary);
+}
+
+.toggle-switch input:checked + .toggle-slider:before {
+  transform: translateX(24px);
+}
+
+/* PIN Form */
+.pin-form {
+  margin-top: var(--alive-padding-md);
+  padding-top: var(--alive-padding-md);
+  border-top: 1px solid var(--alive-border);
+  display: flex;
+  flex-direction: column;
+  gap: var(--alive-padding-md);
+}
+
+.pin-input {
+  font-family: 'Courier New', monospace;
+  font-size: 20px;
+  text-align: center;
+  letter-spacing: 4px;
+}
+
+/* Security Info */
+.security-info {
+  background-color: #f5f9ff;
+  border-radius: var(--alive-radius-md);
+  padding: var(--alive-padding-md);
+  border: 1px solid var(--alive-border);
+}
+
+.security-info h3 {
+  font-family: var(--alive-font-family);
+  font-size: var(--alive-font-size-header);
+  font-weight: var(--alive-font-bold);
+  color: var(--alive-primary);
+  margin: 0 0 var(--alive-padding-md) 0;
+}
+
+.security-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--alive-padding-sm);
+}
+
+.security-list li {
+  font-family: var(--alive-font-family);
+  font-size: var(--alive-font-size-body);
+  color: var(--alive-text);
+  padding-left: var(--alive-padding-lg);
+  position: relative;
+}
+
+.security-list li:before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--alive-accent-success);
+  font-weight: var(--alive-font-bold);
+}
+
+.alert-success {
+  background-color: rgba(40, 167, 69, 0.1);
+  color: var(--alive-accent-success);
+  border: 1px solid var(--alive-accent-success);
+  padding: var(--alive-padding-sm) var(--alive-padding-md);
+  border-radius: var(--alive-radius-sm);
+  font-family: var(--alive-font-family);
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .settings-item-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .toggle-switch {
+    align-self: flex-end;
+  }
+}
+
